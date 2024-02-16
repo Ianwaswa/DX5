@@ -11,6 +11,63 @@ header {
   text-align: center;
   padding: 20px 0;
   font-size: 1.2em; /* Adjust font size */
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.company-info {
+  text-align: left;
+}
+
+.slides {
+  margin-top: 20px;
+  position: relative; /* Position for navigation buttons */
+}
+
+.slide {
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: none; /* Hide slides by default */
+}
+
+.slide img {
+  width: 100%; /* Make images responsive */
+}
+
+.slide.active {
+  display: block; /* Show active slide */
+}
+
+.prev-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-next button {
+  background-color: #333;
+  color: #F0F0F0;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.prev-next button:hover {
+  background-color: #555; /* Darker background color on hover */
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  margin-right: 10px;
 }
 
 header p {
