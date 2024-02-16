@@ -31,7 +31,7 @@ header {
 
 .slide {
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 2.5px solid #ccc;
   background-color: #F0F0F0;
   margin: 0 10px;
   cursor: pointer;
