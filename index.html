@@ -8,7 +8,9 @@
 </head>
 <body>
   <header>
-    <img src="Images/logo.jpg" alt="Company Logo" class="logo">
+    <div class="logo-container">
+      <img src="logo.png" alt="Company Logo" class="logo">
+    </div>
     <div class="company-info">
       <h1>Welcome to Our Company</h1>
       <p>We offer a wide range of high-quality products to meet your needs.</p>
@@ -18,56 +20,35 @@
   <main>
     <div class="slides">
       <div class="slide">
-        <img src="Images/Slide1.jpg" alt="Slide 1 Image">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-      </div>
-      <div class="slide">
-        <img src="Images/Slide2.jpg" alt="Slide 2 Image">
-        <h2>Our Mission</h2>
-        <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
-      </div>
-      <div class="slide">
-        <img src="Images/Slide3.jpg" alt="Slide 3 Image">
-        <h2>Our Vision</h2>
-        <p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</p>
-      </div>
-      <div class="slide">
-        <img src="Images/Slide4.jpg" alt="Slide 4 Image">
-        <h2>Contact Us</h2>
-        <p>Follow us on social media for updates and promotions!</p>
-        <div class="social-icons">
-          <a href="#"><img src="Images/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="Images/twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="Images/instagram.png" alt="Instagram"></a>
+        <div class="slide-content">
+          <h2>About Us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
         </div>
       </div>
-    </div>
-
-    <div class="prev-next">
-      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="next" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-
-    <div id="products-container"></div>
-    <div id="cart">
-      <h2>Shopping Cart</h2>
-      <ul id="cart-items"></ul>
-      <button id="checkout-btn">Checkout</button>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>Our Mission</h2>
+          <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>Our Vision</h2>
+          <p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>Contact Us</h2>
+          <p>Follow us on social media for updates and promotions!</p>
+        </div>
+      </div>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2024 Product Listing</p>
   </footer>
-
-  <div id="confirmation-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Confirmation</h2>
-      <p id="confirmation-message"></p>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
