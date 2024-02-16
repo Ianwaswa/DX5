@@ -38,11 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
     productCard.innerHTML = `
       <img src="${product.image}" alt="${product.title}" />
       <h2>${product.title}</h2>
-      <p>${product.price}</p>
-      <p>${product.description}</p>
-      <p>${product.category}</p>
+      <p>$${product.price}</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
     `;
-    productCard.addEventListener('click', () => addToCart(product));
+    productCard.querySelector('.add-to-cart-btn').addEventListener('click', () => addToCart(product));
     return productCard;
   }
 
@@ -84,13 +83,22 @@ document.addEventListener('DOMContentLoaded', function () {
       li.textContent = `${item.title} - $${item.price}`;
       cartItems.appendChild(li);
     });
+    updateTotalPrice();
+  }
+
+  // Calculate and update total price
+  function updateTotalPrice() {
+    const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+    document.getElementById('total-price').textContent = `Total: $${totalPrice.toFixed(2)}`;
   }
 
   // Checkout
   checkoutBtn.addEventListener('click', () => {
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
-    confirmationMessage.textContent = `Total price: $${totalPrice}. Thank you for your purchase!`;
+    confirmationMessage.textContent = `Total price: $${totalPrice.toFixed(2)}. Thank you for your purchase!`;
     confirmationModal.style.display = 'block';
+    cart = []; // Clear the cart after checkout
+    renderCart(); // Update the cart display
   });
 
   // Close modal
