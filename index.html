@@ -8,26 +8,33 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Our Company</h1>
-    <p>We offer a wide range of high-quality products to meet your needs. Explore our collection below.</p>
+    <img src="logo.png" alt="Company Logo" class="logo"> <!-- Add logo to the left side -->
+    <div class="company-info">
+      <h1>Welcome to Our Company</h1>
+      <p>We offer a wide range of high-quality products to meet your needs.</p>
+    </div>
   </header>
   
   <main>
-    <div id="filters">
-      <label for="category-filter">Filter by category:</label>
-      <select id="category-filter">
-        <option value="all">All</option>
-        <option value="electronics">Electronics</option>
-        <option value="clothing">Clothing</option>
-        <option value="jewelry">Jewelry</option>
-      </select>
-      <label for="sort">Sort by:</label>
-      <select id="sort">
-        <option value="default">Default</option>
-        <option value="price-low-to-high">Price: Low to High</option>
-        <option value="price-high-to-low">Price: High to Low</option>
-      </select>
+    <div class="slides">
+      <div class="slide">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+      </div>
+      <div class="slide">
+        <h2>Our Mission</h2>
+        <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+      </div>
+      <div class="slide">
+        <h2>Our Vision</h2>
+        <p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</p>
+      </div>
+      <div class="slide">
+        <h2>Contact Us</h2>
+        <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
+      </div>
     </div>
+    
     <div id="products-container"></div>
     <div id="cart">
       <h2>Shopping Cart</h2>
